@@ -43,7 +43,7 @@ if (modPlayerSelection === "rock" && modComputerSelection === "rock"){
     msg = "Choose among 'rock', 'paper' or 'scissors'.";    
     }
 
-return msg;
+ return msg;
 }
 
 console.log(playerSelection.toLowerCase() + " : " + computerSelection.toLowerCase());
@@ -73,4 +73,5 @@ playerScore;
 compScore;    
 }
 }
-}*/
+}
+console.log(playerScore + " : " + compScore);*/
