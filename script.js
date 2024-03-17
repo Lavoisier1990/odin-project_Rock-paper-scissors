@@ -42,7 +42,6 @@ if (modPlayerSelection === "rock" && modComputerSelection === "rock"){
     } else {
     msg = "Choose among 'rock', 'paper' or 'scissors'.";    
     }
-
  return msg;
 }
 
