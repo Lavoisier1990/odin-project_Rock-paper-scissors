@@ -17,32 +17,70 @@ const computerSelection = getComputerChoice();
 function playRound(playerSelection, computerSelection) {
 const modPlayerSelection = playerSelection.toLowerCase();
 const modComputerSelection = computerSelection.toLowerCase();
-let msg ="";
+let playerScore = 0;
+let compScore = 0;
+let msg = "";
 
 if (modPlayerSelection === "rock" && modComputerSelection === "rock"){
-    msg = "Stalemate! We have a draw.";
+        playerScore += 1; 
+        compScore += 1; 
+    msg = `Stalemate! We have a draw.\n ${playerScore} : ${compScore}`;
     } else if (modPlayerSelection === "rock" && modComputerSelection === "paper") {
+        playerScore; 
+        compScore += 3; 
     msg = "You Lose! Paper beats Rock."
     } else if (modPlayerSelection === "rock" && modComputerSelection === "scissors") {
+        playerScore += 3; 
+        compScore; 
     msg = "You Win! Rock beats Scissors."
     } else if (modPlayerSelection === "paper" && modComputerSelection === "paper") {
+        playerScore += 1; 
+        compScore += 1; 
     msg = "Stalemate! We have a draw.";
     } else if (modPlayerSelection === "paper" && modComputerSelection === "scissors") {
+        playerScore; 
+        compScore += 3;
     msg = "You Lose! Scissors beats Paper.";
     } else if (modPlayerSelection === "paper" && modComputerSelection === "rock") {
+        playerScore += 3; 
+        compScore; 
     msg = "You Win! Paper beats Rock.";
     } else if (modPlayerSelection === "scissors" && modComputerSelection === "scissors") {
+        playerScore += 1; 
+        compScore += 1; 
     msg = "Stalemate! We have a draw.";
     } else if (modPlayerSelection === "scissors" && modComputerSelection === "rock") {
+        playerScore; 
+        compScore += 3;
     msg = "You Lose! Rock beats Scissors.";
     } else if (modPlayerSelection === "scissors" && modComputerSelection === "paper") {
+        playerScore += 3; 
+        compScore; 
     msg = "You Win! Scissors beats Paper.";
     } else if (modPlayerSelection === "") {
     msg = "Enter something.";
     } else {
     msg = "Choose among 'rock', 'paper' or 'scissors'.";    
     }
- return msg;
+
+/*if (msg.includes("You win!")){
+    playerScore += 3;
+    } else if (msg.includes("You lose!")){
+    compScore += 3;
+    } else if (msg.includes("Stalemate!")){
+    playerScore += 1; 
+    compScore += 1;    
+    } else if (msg.includes("Enter something.")) {
+    playerScore;
+    compScore;    
+    } else {
+    playerScore;
+    compScore;    
+} 
+console.log(playerScore + " : " + compScore);*/
+
+
+return msg;
 }
 
 console.log(playerSelection.toLowerCase() + " : " + computerSelection.toLowerCase());
@@ -52,8 +90,7 @@ console.log(playRound(playerSelection, computerSelection));
 
 /*let playerScore = 0;
 let compScore = 0;
-let gameOver = false;
-let numberOfGames = 5;
+
 
 function playGame(){
 for (let i = 1; i <= 5; i++){
