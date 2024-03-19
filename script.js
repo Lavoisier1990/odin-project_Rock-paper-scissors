@@ -15,18 +15,20 @@ function playGame(){
     myFunction();
 }
 
+function reset(){location.reload();
+}
+/*Write a NEW function called playGame(). Use the previous function inside of this one to play a five round game that keeps score and reports a winner or loser at the end. Use prompt() to get input from the user.*/
+
 function myFunction(){
 const playerSelection = prompt("Choose your weapon");
 const computerSelection = getComputerChoice();
-
-
-function playRound(playerSelection, computerSelection) {
 const modPlayerSelection = playerSelection.toLowerCase();
 const modComputerSelection = computerSelection.toLowerCase();
 let playerScore = 0;
 let compScore = 0;
 let msg = "";
 
+function playRound(playerSelection, computerSelection) {
 if (modPlayerSelection === "rock" && modComputerSelection === "rock"){
         playerScore += 1; 
         compScore += 1; 
@@ -78,28 +80,4 @@ console.log(playRound(playerSelection, computerSelection));
 }
 
 
-/*Write a NEW function called playGame(). Use the previous function inside of this one to play a five round game that keeps score and reports a winner or loser at the end. Use prompt() to get input from the user.*/
 
-/*let playerScore = 0;
-let compScore = 0;
-
-
-function playGame(){
-for (let i = 1; i <= 5; i++){
-if (msg.includes("You win!")){
-playerScore += 3;
-} else if (msg.includes("You lose!")){
-compScore += 3;
-} else if (msg.includes("Stalemate!")){
-playerScore += 1; 
-compScore += 1;    
-} else if (msg.includes("Enter something.")) {
-playerScore;
-compScore;    
-} else {
-playerScore;
-compScore;    
-}
-}
-}
-console.log(playerScore + " : " + compScore);*/
