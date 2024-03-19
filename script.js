@@ -24,61 +24,48 @@ let msg = "";
 if (modPlayerSelection === "rock" && modComputerSelection === "rock"){
         playerScore += 1; 
         compScore += 1; 
-    msg = `Stalemate! We have a draw.\n ${playerScore} : ${compScore}`;
+    msg = `${modPlayerSelection} : ${modComputerSelection}\n Stalemate! We have a draw.\n ${playerScore} : ${compScore}`;
     } else if (modPlayerSelection === "rock" && modComputerSelection === "paper") {
         playerScore; 
         compScore += 3; 
-    msg = "You Lose! Paper beats Rock."
+    msg = `You Lose! Paper beats Rock.\n ${playerScore} : ${compScore}`;
     } else if (modPlayerSelection === "rock" && modComputerSelection === "scissors") {
         playerScore += 3; 
         compScore; 
-    msg = "You Win! Rock beats Scissors."
+    msg = `You Win! Rock beats Scissors.\n ${playerScore} : ${compScore}`;
     } else if (modPlayerSelection === "paper" && modComputerSelection === "paper") {
         playerScore += 1; 
         compScore += 1; 
-    msg = "Stalemate! We have a draw.";
+    msg = `Stalemate! We have a draw.\n ${playerScore} : ${compScore}`;
     } else if (modPlayerSelection === "paper" && modComputerSelection === "scissors") {
         playerScore; 
         compScore += 3;
-    msg = "You Lose! Scissors beats Paper.";
+    msg = `You Lose! Scissors beats Paper.\n ${playerScore} : ${compScore}`;
     } else if (modPlayerSelection === "paper" && modComputerSelection === "rock") {
         playerScore += 3; 
         compScore; 
-    msg = "You Win! Paper beats Rock.";
+    msg = `You Win! Paper beats Rock.\n ${playerScore} : ${compScore}`;
     } else if (modPlayerSelection === "scissors" && modComputerSelection === "scissors") {
         playerScore += 1; 
         compScore += 1; 
-    msg = "Stalemate! We have a draw.";
+    msg = `Stalemate! We have a draw.\n ${playerScore} : ${compScore}`;
     } else if (modPlayerSelection === "scissors" && modComputerSelection === "rock") {
         playerScore; 
         compScore += 3;
-    msg = "You Lose! Rock beats Scissors.";
+    msg = `You Lose! Rock beats Scissors.\n ${playerScore} : ${compScore}`;
     } else if (modPlayerSelection === "scissors" && modComputerSelection === "paper") {
         playerScore += 3; 
         compScore; 
-    msg = "You Win! Scissors beats Paper.";
+    msg = `You Win! Scissors beats Paper.\n ${playerScore} : ${compScore}`;
     } else if (modPlayerSelection === "") {
-    msg = "Enter something.";
+        playerScore;
+        compScore; 
+    msg = `Enter something.\n ${playerScore} : ${compScore}`;
     } else {
-    msg = "Choose among 'rock', 'paper' or 'scissors'.";    
+        playerScore;
+        compScore; 
+    msg = `Choose among 'rock', 'paper' or 'scissors'.\n ${playerScore} : ${compScore}`;    
     }
-
-/*if (msg.includes("You win!")){
-    playerScore += 3;
-    } else if (msg.includes("You lose!")){
-    compScore += 3;
-    } else if (msg.includes("Stalemate!")){
-    playerScore += 1; 
-    compScore += 1;    
-    } else if (msg.includes("Enter something.")) {
-    playerScore;
-    compScore;    
-    } else {
-    playerScore;
-    compScore;    
-} 
-console.log(playerScore + " : " + compScore);*/
-
 
 return msg;
 }
