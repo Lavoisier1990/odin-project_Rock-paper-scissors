@@ -1,1 +1,3 @@
 # odin-project_Rock-paper-scissors
+
+This project was attempted as part of the Odin Project Foundations course, introducing Javascript. It is a simple Rock-Paper-Scissors game. In it's current state it has minimal DOM and plays out mostly in the web browser console. The two buttons are to start the game and reset it. Styling is minimal as the main focus of this game was to showcase our grasp of the Javascript language thus far. Nevertheless, in the future we will revisit this project in a later lesson and add a Graphical User Interface with buttons and text. Had a bit of trouble with variables vis-a-vis global and local scopes but I believe the game is as fully functional. Try it out!  
